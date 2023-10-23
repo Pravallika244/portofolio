@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>My Portfolio</title>
+    <style>
+        
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px;
+            display: none;
+            margin:20px;
+        }
+
+        .project {
+            margin: 20px 0;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+      img {
+        width:200px;
+        height: 300px;
+        position:right;
+        float:left;
+        margin:30px;
+        
+      }
+      h1{
+        margin:30px:
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KIMIDI PRAVALLIKA</h1>
+        <p>ENGINEEREING STUDENT</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">MY INTRODUCTION</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p><img src="https://cdn.glitch.global/7d852fba-2285-4044-9539-99a7a0d8676c/WhatsApp%20Image%202023-10-23%20at%2019.07.29.jpg?v=1698068308732">Hi, I'm KIMIDI PRAVALLIKA, Curently purshuing b.tech 3rd year in vishnu institutte of thechnology bhimavaram 
+          .</p>
+      <p>
+        my dream is to work in reputed companies or organnisations and give my best for the growth of company with my knowledge and exprerience gaijned frfom my work
+      </p>
+      <h1>EDUCATION:</h1><p>
+  <h2>
+    ssc:
+  </h2>Sri chaitayana school,srikakulam 
+  <h2>
+    grade:
+  </h2>  10GPA
+  <h2>
+    intermidiate:
+  </h2>Sri chaitayana junior college vishakhapatanam <h2>
+  grade:
+  </h2>952/1000
+  <h2>
+    BACHELOR OF TECHNOLOGY:
+  </h2>Vishnu institute of techology<h2>
+  specification:
+  </h2> eletrical and electronics engineering.
+  </p><h2>
+  TECHNICAL SKILLS:
+  </h2>PYTHON,C,JAVA,HTML/CSS,IOT
+  <h2>
+    EXTRA CIRICULAR ACTIVITIES:
+  </h2>    Student radio jockey(RJ) at Radio Vishnu 90.4
+  <h2>
+    my cirtifications:
+  </h2>Data pro cirtification inC ND C++,  AWS machine learning ,  introduction to cyber securityy, CISCO Networwkijng Acadamy
+  
+      
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1 </h3>
+            <p>Distance indicating using IOT Technology ansd Thingsspeak.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>created a telegram chat bot using node.js.</p>
+        </div>
+      <div class="project">
+            <h3>Project 3 </h3>
+            <p>created a netflix home paage using html and css.</p>
+        </div>
+      <div class="project">
+            <h3>Project 4 </h3>
+            <p>made a temperature converting website using html/css and java script</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at <a href="mailto:21pa1a0244@vishnu.edu.in">21pa1a0244@vishnu.edu.in</a>.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show the "About" section by default
+            document.querySelector("#about").style.display = "block";
+
+            // Handle navigation with sliding switches
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+
+                    // Hide all sections
+                    const sections = document.querySelectorAll("section");
+                    sections.forEach(section => {
+                        section.style.display = "none";
+                    });
+
+                    // Show the clicked section
+                    const targetId = link.getAttribute("href").substring(1);
+                    document.getElementById(targetId).style.display = "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
